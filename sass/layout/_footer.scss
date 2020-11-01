@@ -1,0 +1,138 @@
+.footer {
+    background: #2F303A;
+
+    &__container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }
+
+    &__contacts {
+        margin-right: 70px;
+    }
+
+    &__list__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list__link {
+        font-size: 14px;
+        line-height: 1.714;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: map-get($colors, "accent-text");
+        }
+    }
+
+    &__social__list {
+        padding-top: 12px;
+        margin-right: 92px;
+    }
+
+    &__subtitle,
+    &__subscription-label {
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: map-get($colors, "title-dark-theme");
+    }
+
+    &__subtitle,
+    &__subscription-desc {
+        margin-bottom: 20px;
+    }
+
+    &__subscription-label {
+        display: inline-block;
+    
+        margin-right: 12px;
+    }
+
+    &__social__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__icon-link {
+        background-color:rgba(255, 255, 255, 0.1);
+        fill: map-get($colors, "text-btn-dark-theme");
+    
+        &:hover,
+        &:focus {
+            background-color: map-get($colors, "accent-text");
+        }
+    }
+
+    &__subscription {
+        padding-top: 12px;
+    }
+
+    &__subscription-form {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__subscription-input {
+        display: block;
+    
+        width: 358px;
+        height: 50px;
+        padding: 16px 15px;
+    
+        font-size: 16px;
+        line-height: 1.250;
+        letter-spacing: 0.03em;
+        color: map-get($colors, "text-btn-dark-theme");
+    
+        background-color: #2F303A;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        &:hover,
+        &:focus {
+            color: map-get($colors, "active-text-btn-dark-theme");
+            background-color: #FFFFFF;
+        }
+    }
+
+    &__button-svg {
+        margin-left: 10px;
+
+        fill: #FFFFFF;
+    
+        transition-property: fill; 
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        .footer__button:hover &,
+        .footer__button:focus & {
+            fill: map-get($colors, "active-text-btn-dark-theme");
+        }
+    }
+}

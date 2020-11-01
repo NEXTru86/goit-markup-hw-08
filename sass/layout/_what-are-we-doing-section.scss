@@ -1,0 +1,33 @@
+.what-are-we-doing-section .container {
+    padding-bottom: 94px;
+}
+
+.we-doing {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &-description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 27px 82px;
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: map-get($colors, "title-dark-theme");
+    
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}

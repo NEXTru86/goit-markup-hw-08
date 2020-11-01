@@ -1,0 +1,25 @@
+// utils
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+// basw
+@import "./base/common";
+@import "./base/container";
+
+// components
+@import "./components/logo";
+@import "./components/section-title";
+@import "./components/modal";
+@import "./components/social-links";
+
+// layout
+@import "./layout/header";
+@import "./layout/main-section";
+@import "./layout/our-adventages-section";
+@import "./layout/what-are-we-doing-section";
+@import "./layout/our-team-section";
+@import "./layout/regular-clients-section";
+@import "./layout/footer";
+
+
+

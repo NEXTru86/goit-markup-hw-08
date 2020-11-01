@@ -1,0 +1,54 @@
+.our-team-section {
+    background-color: #F5F4FA;
+
+    & .container {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    & .icon-list {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.our-team {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-item {
+        width: 270px;
+        
+        overflow: hidden;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &-discription {
+        padding: 30px 32px;
+    
+        background-color: var(--active-text-btn-white-theme);
+        text-align: center;
+    }
+
+    &-subtitle,
+    &-text {
+        font-size: 16px;
+        line-height: 1.188;
+        letter-spacing: 0.03em;
+    }
+
+    &-subtitle {
+        margin-bottom: 10px;
+    
+        font-weight: 500;
+        color: map-get($colors, "title-white-them");
+    }
+
+    &-text {    
+        margin-bottom: 16px;
+    }
+}

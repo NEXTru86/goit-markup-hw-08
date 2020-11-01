@@ -1,0 +1,97 @@
+.portfolio-section {
+    padding-top: 100px;
+    padding-bottom: 94px;
+}
+
+.project {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        width: calc((100% - 60px) / 3);
+
+        &:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n+3)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-item-description {
+        position: relative;
+    
+        overflow: hidden;
+    }
+
+    &-item-desc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 63px 24px;
+        font-size: 18px;
+        line-height: 1.556;
+        letter-spacing: 0.03em;
+        color: map-get($colors, "title-dark-theme");
+        background-color: rgba(33, 150, 243, 0.9);
+    
+        transform: translatey(100%);
+        transition-property: transform;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        .project-item-link:hover &,
+        .project-item-link:focus & {
+            transform: translatey(0);
+        }
+    }
+
+    &-item-link {
+        display: block;
+    
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    &-content {
+        padding: 20px 24px;
+    
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: #EEEEEE;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #EEEEEE;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: #EEEEEE;
+    }
+
+    &-item-subtitle {
+        margin-bottom: 4px;
+    
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2.000;
+        letter-spacing: 0.06em;
+        color: map-get($colors, "title-white-them");
+    }
+
+    &-item-text {
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.03em;
+        color: map-get($colors, "text-main");
+    }
+}
