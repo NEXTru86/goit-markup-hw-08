@@ -1,5 +1,6 @@
 // utils
 @import "./utils/variables";
+@import "./utils/breakpoints";
 
 // basw
 @import "./base/common";
@@ -9,7 +10,7 @@
 @import "./components/logo";
 @import "./components/section-title";
 @import "./components/social-links";
-@import "./components/filers";
+@import "./components/filters";
 
 // layout
 @import "./layout/header";

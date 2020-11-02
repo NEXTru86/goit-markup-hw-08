@@ -1,5 +1,10 @@
-.what-are-we-doing-section .container {
-    padding-bottom: 94px;
+.what-are-we-doing-section { 
+    @media screen and (max-width: 1599px) {
+        display: none;
+    }
+    & .container {
+        padding-bottom: 94px;
+    }
 }
 
 .we-doing {

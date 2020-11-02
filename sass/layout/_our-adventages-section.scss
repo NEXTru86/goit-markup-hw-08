@@ -1,25 +1,55 @@
 .our-adventages-section {
     & .container {
-        padding-top: 94px;
-        padding-bottom: 94px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @media screen and (min-width: $desktop) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
     }
 }
 
 .adventages-list {
-    display: flex;
-    justify-content: space-between;
+    
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-wrap: nowrap;
+    }
 
     &-item {
-        width: calc((100%-90px) / 4);
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
 
-        &:not(:last-child) {
-            margin-right: 30px;
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 30px) / 2);
+            &:nth-child(-n+2) {
+                margin-bottom: 30px;
+            }
+            &:not(:nth-child(2n)) {
+                margin-right: 30px;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 90px) / 4);
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
         }
 
         &::before {
             display: block;
             content: "";
-            width: 270px;
+            width: 100%;
             height: 120px;
             margin-bottom: 30px;
             background-color:#F5F4FA;
@@ -55,6 +85,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: map-get($colors, "title-white-them");
+
+    @media screen and (max-width: 767px) {
+        text-align: center; 
+    }
 }
 
 .adventages-text {

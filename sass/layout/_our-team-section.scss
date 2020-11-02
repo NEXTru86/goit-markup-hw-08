@@ -30,7 +30,7 @@
     &-discription {
         padding: 30px 32px;
     
-        background-color: var(--active-text-btn-white-theme);
+        background-color: map-get($colors, "active-text-btn-white-theme");
         text-align: center;
     }
 

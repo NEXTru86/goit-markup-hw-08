@@ -6,21 +6,31 @@
         background-size: cover;
 
     & .container {
-        padding-top: 200px;
-        padding-bottom: 200PX;
+        padding-top: 118px;
+        padding-bottom: 118PX;
         text-align: center;
+        
+        @media screen and (min-width: $desktop) {
+            padding-top: 200px;
+            padding-bottom: 200PX;
+        }
     }
 
     &-title {
         margin-bottom: 30px;
     
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.364;
+        font-size: 26px;
+        line-height: 1.615;
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: map-get($colors, "text-btn-dark-theme");
+
+        @media screen and (min-width: $desktop) {
+            font-size: 44px;
+            line-height: 1.364;
+        }
     }
 }
 
