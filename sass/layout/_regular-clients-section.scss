@@ -1,22 +1,45 @@
 .clients {
-    & .container {
-        padding: 94px 15px;
-    }
-
     &-list {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: $desktop) {
+            justify-content: space-between;
+        }
     }
 
-    &-item:not(:last-child) {
-        margin-right: 30px;
+    @media screen and (max-width: 767px) {
+        &-item {
+            width: calc((100% - 30px) / 2);
+        }
+
+        &-item:nth-child(-n+4) {
+            margin-bottom: 30px;
+        }
+
+        &-item:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        &-item {
+            width: calc((100% - 60px) / 3);
+        }
+
+        &-item:nth-child(-n+3) {
+            margin-bottom: 30px;
+        }
+
+        &-item:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
     }
 
     &-link {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 170px;
         height: 90px;
     
         fill: #AFB1B8;
@@ -32,6 +55,10 @@
         &:focus {
             border:1px solid map-get($colors, "accent-text");
             fill: map-get($colors, "accent-text");
+        }
+
+        @media screen and (min-width: $desktop) {
+             width: 170px;
         }
     }
 }

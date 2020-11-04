@@ -1,9 +1,9 @@
 .what-are-we-doing-section { 
-    @media screen and (max-width: 1599px) {
+    @media screen and (max-width: 1199px) {
         display: none;
     }
     & .container {
-        padding-bottom: 94px;
+        padding-top: 0;
     }
 }
 

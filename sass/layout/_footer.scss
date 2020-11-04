@@ -2,19 +2,50 @@
     background: #2F303A;
 
     &__container {
-    display: flex;
-    align-items: flex-start;
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &__desc {
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            padding-left: 76px;
+            padding-right: 89px;
+         }
     }
 
     &__contacts {
-        margin-right: 70px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-right: 70px;
+        }
     }
 
     &__list__item {
         &:not(:last-child) {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+
+            @media screen and (min-width: $desktop) {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -35,8 +66,9 @@
     }
 
     &__social__list {
-        padding-top: 12px;
-        margin-right: 92px;
+        @media screen and (min-width: $desktop) {
+            padding-top: 12px;
+        }
     }
 
     &__subtitle,
@@ -57,13 +89,21 @@
 
     &__subscription-label {
         display: inline-block;
-    
-        margin-right: 12px;
+
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
     }
 
     &__social__items {
-        display: flex;
+        display: inline-flex;
         justify-content: space-between;
+        text-align: center;
+
+        width: 206px;
     }
 
     &__social__item {
@@ -83,12 +123,16 @@
     }
 
     &__subscription {
-        padding-top: 12px;
+        @media screen and (min-width: $desktop) {
+            padding-top: 12px;
+        }
     }
 
     &__subscription-form {
-        display: flex;
-        align-items: flex-end;
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            align-items: flex-end;
+        }
     }
 
     &__subscription-input {
@@ -113,6 +157,9 @@
         display: flex;
         align-items: center;
         height: 50px;
+
+        margin-right: auto;
+        margin-left: auto;
 
         &:hover,
         &:focus {
