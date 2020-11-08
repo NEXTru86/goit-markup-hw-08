@@ -168,11 +168,23 @@ img {
   transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: linear;
-  min-width: 528px;
-  min-height: 580px;
+  min-width: 450px;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 580px;
+  }
 }
 
 .modal__btn {
@@ -206,10 +218,16 @@ img {
 .form-title {
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-title {
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -247,6 +265,13 @@ img {
 .form-input:not(:placeholder-shown), .form-comment:not(:placeholder-shown) {
   border: 1px solid #2196F3;
   outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-input, .form-comment {
+    font-size: 12px;
+    line-height: 1.167;
+  }
 }
 
 .form-input {
@@ -293,10 +318,17 @@ img {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-checkbox {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .form-checkbox-input {
@@ -307,11 +339,18 @@ img {
 }
 
 .form-checkbox-input-link {
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: #2196F3;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-checkbox-input-link {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .checkbox-icon {

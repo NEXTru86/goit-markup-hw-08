@@ -1,24 +1,39 @@
-// .portfolio-section {
-//     padding-top: 94px;
-//     padding-bottom: 94px;
-// }
-
 .project {
-    &-list {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &-item {
-        width: calc((100% - 60px) / 3);
-
-        &:not(:nth-child(3n)) {
-            margin-right: 30px;
-        }
-
-        &:not(:nth-last-child(-n+3)) {
+    @media screen and (max-width: 1199px) {
+        &-item:not(:last-child) {
             margin-bottom: 30px;
         }
+    }
+
+    @media screen and (min-width: $tablet) {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        &-item {
+            width: calc((100% - 30px) / 2);
+        }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        &-item:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        &-item {
+            width: calc((100% - 60px) / 3);
+
+            &:not(:nth-child(3n)) {
+                margin-right: 30px;
+            }
+
+            &:not(:nth-last-child(-n+3)) {
+                margin-bottom: 30px;
+            }
+        }    
     }
 
     &-item-description {
@@ -86,6 +101,36 @@
         line-height: 2.000;
         letter-spacing: 0.06em;
         color: map-get($colors, "title-white-them");
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        &-item-subtitle-part-visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;   
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
+    }
+
+    @media screen and (max-width: 767px), (min-width: $desktop) {
+        &-item-subtitle-visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;   
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
     }
 
     &-item-text {

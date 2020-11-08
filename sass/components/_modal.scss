@@ -35,9 +35,17 @@
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: linear;
-    
-    min-width: 528px;
-    min-height: 580px;
+
+    min-width: 450px;
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: 528px;
+        min-height: 580px;
+    }
 
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -81,10 +89,14 @@
         margin-bottom: 12px;
     
         font-size: 20px;
-        line-height: 1.15;
+        line-height: 1.5;
         text-align: center;
         letter-spacing: 0.03em;
         color: map-get($colors, "title-white-them");
+
+        @media screen and (min-width: $desktop) {
+            line-height: 1.15;
+        }
     }
 
     &-field {
@@ -130,6 +142,11 @@
         &:not(:placeholder-shown) {
             border: 1px solid map-get($colors, "accent-text");
             outline: none;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 12px;
+            line-height: 1.167;
         }
     }
 
@@ -180,11 +197,16 @@
         margin-top: 20px;
         margin-bottom: 30px;
         
-        font-size: 14px;
-        line-height: 1.714;
+        font-size: 12px;
+        line-height: 1.167;
         letter-spacing: 0.03em;
-    
+
         cursor: pointer;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 14px;
+            line-height: 1.714;
+        }
 
         &-input {
             -webkit-appearance: none;
@@ -193,13 +215,18 @@
         
             position: absolute;
         }
+    }
 
-        &-input-link {
+    &-checkbox-input-link {
+        font-size: 12px;
+        line-height: 1.167;
+        letter-spacing: 0.03em;
+        text-decoration-line: underline;
+        color: map-get($colors, "accent-text");
+
+        @media screen and (min-width: $desktop) {
             font-size: 14px;
             line-height: 1.714;
-            letter-spacing: 0.03em;
-            text-decoration-line: underline;
-            color: map-get($colors, "accent-text");
         }
     }
 }
