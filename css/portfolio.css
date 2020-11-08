@@ -3,6 +3,19 @@
   --secondary-font: "Raleway", sans-serif;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -144,12 +157,33 @@ img {
 
 .portfolio-filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-filter-list {
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-filter-list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-filter-item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-filter-item:nth-child(-n+3) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio-filter-btn {
@@ -256,11 +290,6 @@ img {
 
 .address__icon {
   margin-right: 10px;
-}
-
-.portfolio-section {
-  padding-top: 100px;
-  padding-bottom: 94px;
 }
 
 .project-list {
