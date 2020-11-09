@@ -28,6 +28,8 @@
     top: 50%;
     left: 50%;
 
+    width: 100%;
+
     padding: 40px;
     z-index: 2;
 
@@ -35,8 +37,6 @@
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: linear;
-
-    min-width: 450px;
 
     @media screen and (min-width: $mobile) {
         width: 450px;
