@@ -573,6 +573,10 @@ img {
   color: #757575;
 }
 
+.project-item-img {
+  width: 100%;
+}
+
 .footer {
   background: #2F303A;
 }
