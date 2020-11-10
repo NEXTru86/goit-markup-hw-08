@@ -16,14 +16,20 @@
         <div class="container header__container">
             <nav class="navigation header__navigation">
                 <a class="logo navigation__logo link" href="./index.html" aria-label="логотип вебстудио"><span class="logo-part">Web</span>Studio</a>
-                <button type="button" class="header__menu-btn is-open" aria-expanded="true" data-menu-button>
+                <button 
+                    type="button" 
+                    class="header__menu-btn" 
+                    aria-expanded="true" 
+                    aria-controls="menu-container" 
+                    data-menu-button
+                >
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                         <use class="icon-close" href="./imeges/sprite.svg#close40px"></use>
                         <use class="icon-menu" href="./imeges/sprite.svg#menu40px"></use>
                     </svg>
                 </button>
             
-                <div class="menu-container">
+                <div class="menu-container" id="menu-container" data-menu>
                     <ul class="navigation__list list">
                         <li class="navigation__item">
                             <a class="navigation__link navigation__link--active link" href="./index.html">Студия</a>

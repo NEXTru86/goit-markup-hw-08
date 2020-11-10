@@ -1,7 +1,7 @@
 .menu-container {
     @media screen and (max-width: 767px) {
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
         padding-top: 60px;
         padding-bottom: 60px;
@@ -17,55 +17,43 @@
         transition-property: transform;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &.is-open {
+            transform: translatey(0);
+        }
     }
 
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
     }
 }
 
-.header {
+.header {  
     @media screen and (max-width: 767px) {
+        position: relative;
         border-bottom: 1px solid #ECECEC;
     }
-    // padding-top: 4px;
 
     &__container {
-        position: relative;
         padding-top: 0;
         padding-bottom: 0;
-
-        @media screen and (min-width: $tablet) {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-    }
-
-    &__container {
-        @media screen and (min-width: $tablet) {
-            display: flex;
-            align-items: center;
-        }
     }
 
     &__navigation {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        min-height: 60px;
-    //     @media screen and (max-width: 767px) {
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: space-between;
-    //         min-height: 60px;
-    //     }
 
-    //     @media screen and (min-width: $tablet) {
-    //         display: flex;
-    //         align-items: center;
-    //     }
+        @media screen and (max-width: 767px) {
+            justify-content: space-between;
+            min-height: 60px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            min-height: 80px;
+        }
     }
 
     &__menu-btn {
@@ -99,50 +87,45 @@
         &.is-open .icon-menu {
             display: none;
         }
-
-        &.is-open + .menu-container {
-            transform: translatey(0);
-        }
-    }
-
-    &__address {
-        display: inline-block;
-        // @media screen and (min-width: $tablet) {
-        //     margin-left: auto;
-        // }
     }
 }
 
-// .navigation__logo {
-//     @media screen and (min-width: $tablet) {
-//         margin-right: 88px;
-//     }
+.navigation__logo {
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
 
-//     @media screen and (min-width: $desktop) {
-//         margin-right: 94px;
-//     }
-// }
+    @media screen and (min-width: $desktop) {
+        margin-right: 94px;
+    }
+}
 
 .navigation__list {
     @media screen and (max-width: 767px) {
         margin-bottom: 60px;
     }
 
-    // display: flex;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+    }
 }
 
-// .address__list {
-//     @media screen and (min-width: $desktop) {
-//         display: flex;
-//     }
-// }
+.address__list {
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
+}
 
 .navigation__item {
     &:not(:last-child) {
         @media screen and (max-width: 767px) {
             margin-bottom: 40px;
         }
-        // margin-right: 50px;
+
+        @media screen and (min-width: $tablet) {
+            margin-right: 50px;
+        }
     }
 }
 
@@ -163,7 +146,7 @@
         fill: map-get($colors, "accent-text");
     }
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
         font-size: 14px;
         line-height: 1.143;
     }
@@ -174,8 +157,8 @@
 
     @media screen and (min-width: $tablet) {
         display: block;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
     color: map-get($colors, "title-white-them");
@@ -203,31 +186,26 @@
     }
 }
 .address__link {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+    }
 
     color: map-get($colors, "text-main");
     fill: map-get($colors, "text-main");
 }
 
 .address__item {
-    display: block;
-    text-align: center;
-
-    @media screen and (max-width: 767px) {
-        &:not(:last-child) {
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
             margin-bottom: 16px;
         }
-    }
-
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        &:not(:last-child) {
+        
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
             margin-bottom: 10px;
         }
-    }
 
-    @media screen and (min-width: $desktop) {
-        &:not(:last-child) {
+        @media screen and (min-width: $desktop) {
             margin-right: 50px;
         }
     }
