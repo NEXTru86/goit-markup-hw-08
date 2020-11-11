@@ -1039,8 +1039,15 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__subtitle, .footer__subscription-desc {
+    text-align: left;
+  }
+}
+
 .footer__subscription-label {
   display: inline-block;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -1086,7 +1093,10 @@ img {
 
 .footer__subscription-input {
   display: block;
-  width: 358px;
+  width: 100%;
+  max-width: 358px;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px;
   padding: 16px 15px;
   font-size: 16px;
@@ -1097,6 +1107,12 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__subscription-input {
+    width: 358px;
+  }
 }
 
 .footer__button {
